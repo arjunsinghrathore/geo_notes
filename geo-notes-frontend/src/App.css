@@ -1,0 +1,228 @@
+.App {
+  text-align: center;
+  min-height: 100vh;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.h-66 {
+  height: 50%;
+}
+
+.h-34 {
+  height: 50%;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* For dashboard */
+
+@keyframes gradientWave {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animatedGradient {
+  background: linear-gradient(270deg, purple, black);
+  background-size: 200% 200%;
+  animation: gradientWave 15s infinite;
+}
+
+.dashboardContainer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/*  */
+
+.createNotePanel {
+  background: rgba(255, 255, 255, 0.6); /* Ensure translucent background */
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: auto; /* Adjust the height to fit the content */
+  max-height: calc(71.66vh - 1px); /* Set a maximum height */
+  /* overflow-y: auto; Allow scrolling if content exceeds max-height */
+}
+
+.notesListPanel {
+  background: rgba(255, 255, 255, 0.6); /* Ensure translucent background */
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: calc(71.66vh - 1px); /* 2/3 of the viewport height minus margins */
+  text-align: left; /* Left-align the content */
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  background: linear-gradient(270deg, purple, black); /* Apply the gradient background here */
+  background-size: 200% 200%;
+  animation: gradientWave 15s infinite;
+}
+
+.notesListContent {
+  overflow-y: auto;
+  max-height: calc(100vh - 100px); /* Adjust this value based on the height of your title and logout button */
+  flex-grow: 1;
+}
+
+
+.noteBox {
+  text-align: left; /* Left-align individual notes */
+}
+
+.logoutButton {
+  position: absolute;
+  top: 30px;
+  right: 170px;
+  z-index: 10; /* Ensure the button stays above other content */
+}
+
+/* For the Homepage */
+
+
+.video-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center; /* Vertically center the content */
+  justify-content: center; /* Horizontally center the content */
+}
+
+.background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  max-width: 40%; /* Restrict the width of the content */
+  margin-left: 20%; /* Push the content to the right side */
+  text-align: left; /* Align the text to the left */
+}
+
+.register-btn {
+  display: block;
+  margin: 10px 0;
+  padding: 10px 20px;
+  background-color: #E98074;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  font-family: 'Georgia', serif;
+}
+
+.register-btn:hover {
+  background-color: #D8C3A5;
+}
+
+.about-section h1 {
+  text-align: center;
+  font-family: 'Georgia', serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.about-section p {
+  font-family: 'Georgia', serif;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  text-align: justify;
+  margin-top: 1rem;
+}
+
+/* Home Button */
+
+.home-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white;
+  background-color: #c01616;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.home-btn:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+/* Home Button in Dashboard */
+
+.home-btn-dash {
+  position: absolute;
+  top: 30px;
+  right: 90px;
+  color: white;
+  background-color: #c01616;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.home-btn-dash:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
